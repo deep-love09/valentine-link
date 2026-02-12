@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>❤️ Special Valentine Proposal ❤️</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            height: 100vh;
+            background: linear-gradient(135deg, #ffe6e6, #ffb3c6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #d6336c;
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+
+        .heart {
+            font-size: 5rem;
+            animation: beat 1s infinite ease-in-out;
+        }
+
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .btn {
+            margin: 10px;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .yes {
+            background: #d6336c;
+            color: white;
+        }
+
+        .yes:hover {
+            background: #b52a59;
+        }
+
+        .no {
+            background: #555;
+            color: white;
+        }
+
+        .no:hover {
+            background: #333;
+        }
+
+        #loveLetter {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+
+        <h1>Will You Be My Valentine? 💍</h1>
+        <p>I have something very special to ask you… 💖</p>
+
+        <button class="btn yes" onclick="sayYes()">Yes 💕</button>
+        <button class="btn no" onclick="sayNo()">No 😢</button>
+
+        <p id="response"></p>
+
+        <div id="loveLetter">
+            <h2>💌 A Letter For You 💌</h2>
+            <p>
+                From the moment you came into my life, everything became brighter.
+                Your smile, your laugh, your presence — they mean more to me than
+                words can ever express.  
+                <br><br>
+                Thank you for being you. 💖
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function sayYes() {
+            document.getElementById("response").innerText =
+                "YAY!!! Best decision ever! 💖";
+            document.getElementById("loveLetter").style.display = "block";
+        }
+
+        function sayNo() {
+            document.getElementById("response").innerText =
+                "Sorry... This feature is unavailable 😌💔";
+            document.getElementById("loveLetter").style.display = "none";
+        }
+    </script>
+</body>
+</html>
